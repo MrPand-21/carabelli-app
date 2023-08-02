@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router"
+import { NavigationContext } from '../utilities/context/NavigationContext';
 
 const propTypes = {
     signOut: PropTypes.func
@@ -11,6 +12,8 @@ const defaultProps = {
 };
 
 const SignedIn = (props) => {
+
+    const { handleTabClick } = useContext(NavigationContext)
     let { signOut } = props
     const [isClicked, setIsClicked] = useState(false)
     let navigate = useNavigate()
@@ -27,8 +30,9 @@ const SignedIn = (props) => {
                         Categories
                     </a>
                     <a className='item' onClick={ () => {
+                        handleClick("products");
                         signOut();
-                        navigate("/")
+                        navigate("/");
                     } }>
                         Çıkış Yap
                     </a>

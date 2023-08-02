@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { NavigationContext } from '../utilities/context/NavigationContext';
 
 const propTypes = {};
 
@@ -9,7 +10,9 @@ const defaultProps = {};
 const CartSummary = () => {
 
     const [isClicked, setIsClicked] = useState(false)
+    const { activeTab, handleTabClick } = useContext(NavigationContext)
     let handleClick = () => {
+        handleTabClick(activeTab)
         setIsClicked(!isClicked);
     }
 
@@ -34,7 +37,7 @@ const CartSummary = () => {
                 }
 
                 <div className='item' style={ { width: "inherit", boxSizing: "content-box" } }>
-                    <Link to="/cart">Sepete Git</Link>
+                    <Link to="/cart" onClick={ handleTabClick("cart") } >Sepete Git</Link>
                 </div>
 
 

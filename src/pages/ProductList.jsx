@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ProductService from '../services/productService';
 import { Link } from "react-router-dom"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from '../store/actions/cartActions';
 import { toast } from "react-toastify"
 
@@ -12,15 +12,8 @@ const defaultProps = {};
 
 const ProductList = () => {
 
-    const [products, setProducts] = useState([])
     const dispatch = useDispatch()
-
-
-    useEffect(() => {
-        let productService = new ProductService()
-        setProducts(productService.getProducts())
-    }, [])
-
+    const { products } = useSelector(state => state.products)
 
     function handleAddToCart(product) {
         dispatch(addToCart(product))

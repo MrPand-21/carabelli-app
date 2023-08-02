@@ -25,10 +25,22 @@ export default function cartReducer(state = initialState, { type, payload }) {
                 }
             }
         case REMOVE_FROM_CART:
-            return {
-                ...state,
-                cartItems: state.cartItems.filter(c => c.product.id != payload.id)
+            let item = state.cartItems.find(c => c.product.id == payload.id)
+            if (item) {
+                if (item.quantity > 1) {
+                    item.quantity--
+                    return {
+                        ...state
+                    }
+                } else {
+                    return {
+                        ...state,
+                        cartItems: state.cartItems.filter(c => c.product.id != payload.id)
+                    }
+                }
+
             }
+
         default:
             return state;
     }

@@ -6,6 +6,8 @@ import ProductList from '../pages/ProductList';
 import { Route, Routes } from "react-router-dom"
 import ProductDetail from '../pages/ProductDetail';
 import { ToastContainer } from "react-toastify"
+import ProductAdd from '../pages/ProductAdd';
+import CartDetail from '../pages/CartDetail';
 
 
 const propTypes = {};
@@ -25,6 +27,8 @@ const Dashboard = () => {
                         <Route index Component={ ProductList } />
                         <Route exact path='/products' Component={ ProductList } />
                         <Route exact path='/products/:id' Component={ ProductDetail } />
+                        <Route exact path='/products/add' Component={ ProductAdd } />
+                        <Route exact path='/cart' Component={ CartDetail } />
                     </Routes>
 
                 </div>

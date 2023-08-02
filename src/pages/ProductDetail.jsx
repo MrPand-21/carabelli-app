@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from "react-router-dom";
 import ProductService from '../services/productService';
+import { useDispatch, useSelector } from "react-redux"
+import { addToCart, removeFromCart } from '../store/actions/cartActions';
+import { toast } from 'react-toastify';
 
 
 const propTypes = {};
@@ -10,12 +13,26 @@ const defaultProps = {};
 
 
 const ProductDetail = () => {
-    let productService = new ProductService();
+
     let { id } = useParams()
-    const [product, setProduct] = useState(productService.getById(id))
+    const { products } = useSelector(state => state.products)
+    let product = products.find(p => p.id == id);
+    const dispatch = useDispatch()
+
+    const handleAddToCart = () => {
+        dispatch(addToCart(product))
+        toast.success(`${product.ad} eklendi!`)
+    }
+
+    const handleRemoveFromCart = () => {
+        dispatch(removeFromCart(product))
+        toast.info(`${product.ad} sepetten çıkarıldı!`)
+    }
+
     useEffect(() => {
-        setProduct(productService.getById(id))
-    }, [product])
+        product = products.find(p => p.id == id);
+    }, [products])
+
     return (
         <div className='ui card centered large raised fluid'>
             <div className='content'>
@@ -25,8 +42,8 @@ const ProductDetail = () => {
             </div>
             <div className='extra content'>
                 <div className='ui two buttons'>
-                    <div className='ui basic green button'>Add to Cart</div>
-                    <div className='ui basic red button'>Remove from Fav</div>
+                    <div className='ui basic green button' onClick={ () => handleAddToCart() }>Add to Cart</div>
+                    <div className='ui basic red button' onClick={ () => handleRemoveFromCart() }>Remove from Cart</div>
                 </div>
             </div>
 
