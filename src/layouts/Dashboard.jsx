@@ -8,6 +8,7 @@ import ProductDetail from '../pages/ProductDetail';
 import { ToastContainer } from "react-toastify"
 import ProductAdd from '../pages/ProductAdd';
 import CartDetail from '../pages/CartDetail';
+import WandNImage from '../pages/WandNImage';
 
 
 const propTypes = {};
@@ -29,6 +30,8 @@ const Dashboard = () => {
                         <Route exact path='/products/:id' Component={ ProductDetail } />
                         <Route exact path='/products/add' Component={ ProductAdd } />
                         <Route exact path='/cart' Component={ CartDetail } />
+                        <Route exact path='/style' Component={ WandNImage } />
+                        <Route path="/style/wand" Component={ WandNImage } />
                     </Routes>
 
                 </div>
