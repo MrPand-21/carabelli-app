@@ -9,6 +9,8 @@ import { ToastContainer } from "react-toastify"
 import ProductAdd from '../pages/ProductAdd';
 import CartDetail from '../pages/CartDetail';
 import WandNImage from '../pages/WandNImage';
+import HoverCards from '../pages/HoverCards';
+import ProfileSearcher from '../pages/ProfileSearcher';
 
 
 const propTypes = {};
@@ -32,6 +34,8 @@ const Dashboard = () => {
                         <Route exact path='/cart' Component={ CartDetail } />
                         <Route exact path='/style' Component={ WandNImage } />
                         <Route path="/style/wand" Component={ WandNImage } />
+                        <Route path="/style/hover" Component={ HoverCards } />
+                        <Route path="/style/searcher" Component={ ProfileSearcher } />
                     </Routes>
 
                 </div>

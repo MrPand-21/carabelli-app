@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import CartSummary from './CartSummary';
 import SignedOut from './SignedOut';
@@ -25,8 +25,6 @@ const Navi = () => {
         else
             setActiveItem("home")
     }
-
-    console.log(activeItem)
 
     function handleActiveItem(activeItem) {
         setActiveItem(activeItem)
@@ -55,7 +53,9 @@ const Navi = () => {
                     Style
                     <CrMenu>
                         <div className='flex flex-col basis-2/4'>
-                            <CrMenuItem to="/style/wand" name="wand" clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/wand" name="wand" id={ "first" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/hover" name="hover" id={ "second" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/searcher" name="searcher" id={ "third" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                         </div>
                     </CrMenu>
                 </div>

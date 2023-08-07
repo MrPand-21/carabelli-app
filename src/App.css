@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(232px circle at var(--mouse-x) var(--mouse-y),
+        /* Adjust the displacement here */
+        var(--tw-gradient-stops));
+  }
+}
+
+.help {
+  left: 300px important;
+}
+
 .App {
   text-align: center;
 }
@@ -34,6 +46,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.hover-card::before {
+  background: radial-gradient(800px circle at 1000px 1000px,
+      rgba(255, 255, 255, 0.06),
+      tranparent 40%);
 }
 
 a {

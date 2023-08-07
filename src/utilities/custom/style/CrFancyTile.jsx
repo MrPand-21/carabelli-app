@@ -22,16 +22,14 @@ const CrFancyTile = (props) => {
 
     function handleTile(event) {
         if (wand) {
+
             let wandDimensions = wand.current.getBoundingClientRect()
             const image = document.getElementById(id);
 
             const dimensions = image.getBoundingClientRect()
-            console.log(wandDimensions)
-
             const relativeLeft = wandDimensions.x - dimensions.left
 
             const opacity = relativeLeft / image.width
-
             const blur = (1 - opacity);
             image.style.opacity = opacity.toString();
 
