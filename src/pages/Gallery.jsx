@@ -45,14 +45,14 @@ const Gallery = () => {
         };
     }, [])
     return (
-        <div ref={ screen } className='screen overflow-hidden  relative m-0 h-[80vh] bg-black rounded-2xl'>
+        <div ref={ screen } className='screen overflow-hidden  relative m-0 h-[80vh] w-full bg-black rounded-2xl'>
             <div ref={ gallery } className='gallery absolute w-[125vmax] aspect-square '>
                 <CrGalleryTile className="tile w-[13%] h-[14%] bg-sky-400 left-[35%] top-[13%]"
                     src={ "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" }></CrGalleryTile>
                 <CrGalleryTile className="tile w-[12%] h-[12%] bg-neutral-400 left-[56%] top-[35%]"
                     src={ "https://images.unsplash.com/photo-1529429617124-95b109e86bb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGRvZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" }></CrGalleryTile>
                 <CrGalleryTile className="tile w-[32%] h-[18%] bg-yellow-300 left-[90%] top-[50%]"
-                    src={ "https://townsquare.media/site/812/files/2016/09/Chicks-Car-.jpg?w=980&q=75" }>
+                    src={ "https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsdWV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=70" }>
                 </CrGalleryTile>
                 <CrGalleryTile className="tile w-[15%] h-[13%] bg-teal-400 left-[7%] top-[70%]"
                     src={ "https://ae01.alicdn.com/kf/H85426ced395c4c6a8246fc70c7db3e468/Yaz-bask-Mini-tenis-etek-beyaz-pilili-etek-k-sa-kad-n-elastik-bel-Mini-etek.jpg_.webp" }></CrGalleryTile>

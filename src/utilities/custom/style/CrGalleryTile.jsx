@@ -19,7 +19,7 @@ const CrGalleryTile = ({ children, className, src }) => {
 
     return (
         <div className={ fullClassName }>
-            <img src={ src } className='w-full h-full object-bottom saturate-150 object-cover border-[inherit] rounded-[inherit] opacity-10 blur-3xl invisible group-hover:visible group-hover:opacity-100 duration-500 transition-all group-hover:blur-0' />
+            <img src={ src } className='w-full h-full object-bottom saturate-150 object-cover border-[inherit] rounded-[inherit] group-hover:scale-110 opacity-10 blur-3xl invisible group-hover:visible group-hover:opacity-100 duration-500 transition-all group-hover:blur-0' />
 
         </div>)
         ;
