@@ -11,6 +11,7 @@ import CartDetail from '../pages/CartDetail';
 import WandNImage from '../pages/WandNImage';
 import HoverCards from '../pages/HoverCards';
 import ProfileSearcher from '../pages/ProfileSearcher';
+import Gallery from '../pages/Gallery';
 
 
 const propTypes = {};
@@ -36,6 +37,7 @@ const Dashboard = () => {
                         <Route path="/style/wand" Component={ WandNImage } />
                         <Route path="/style/hover" Component={ HoverCards } />
                         <Route path="/style/searcher" Component={ ProfileSearcher } />
+                        <Route path="/style/gallery" Component={ Gallery } />
                     </Routes>
 
                 </div>

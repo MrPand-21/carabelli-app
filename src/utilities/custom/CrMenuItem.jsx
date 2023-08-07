@@ -7,17 +7,15 @@ const propTypes = {
     to: PropTypes.string,
     name: PropTypes.string,
     basis: PropTypes.string,
-    id: PropTypes.string
 };
 
 const defaultProps = {
     name: "Item",
     basis: "basis-1/4",
-    id: ""
 };
 
 const CrMenuItem = (props) => {
-    const { clickFxn, to, name, basis, id } = props
+    const { clickFxn, to, name, basis } = props
 
     return (<div className={ 'text-[3vw] group subpixel-antialiased capitalize text-center relative text-[#a5673f]/80 ' + basis }>
         <Link to={ to } className=' top-1/3 left-[17%] font-sans hover:animate-pulse z-20 opacity-75 

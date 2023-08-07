@@ -53,9 +53,10 @@ const Navi = () => {
                     Style
                     <CrMenu>
                         <div className='flex flex-col basis-2/4'>
-                            <CrMenuItem to="/style/wand" name="wand" id={ "first" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
-                            <CrMenuItem to="/style/hover" name="hover" id={ "second" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
-                            <CrMenuItem to="/style/searcher" name="searcher" id={ "third" } basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/wand" name="wand" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/hover" name="hover" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/searcher" name="searcher" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/gallery" name="gallery" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                         </div>
                     </CrMenu>
                 </div>
