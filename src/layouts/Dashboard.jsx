@@ -12,6 +12,8 @@ import WandNImage from '../pages/WandNImage';
 import HoverCards from '../pages/HoverCards';
 import ProfileSearcher from '../pages/ProfileSearcher';
 import Gallery from '../pages/Gallery';
+import MagicalText from '../pages/MagicalText';
+import TwitchHover from '../pages/TwitchHover';
 
 
 const propTypes = {};
@@ -38,6 +40,8 @@ const Dashboard = () => {
                         <Route path="/style/hover" Component={ HoverCards } />
                         <Route path="/style/searcher" Component={ ProfileSearcher } />
                         <Route path="/style/gallery" Component={ Gallery } />
+                        <Route path="/style/magical-text" Component={ MagicalText } />
+                        <Route path="/style/twitch-hover" Component={ TwitchHover } />
                     </Routes>
 
                 </div>

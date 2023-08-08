@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer utilities {
   .bg-gradient-radial {
     background: radial-gradient(232px circle at var(--mouse-x) var(--mouse-y),
@@ -10,8 +11,72 @@
   }
 }
 
-.help {
-  left: 300px important;
+@keyframes background-pan {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+
+  from,
+  to {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+:root {
+  --purple: rgb(123, 31, 162);
+  --pink: rgb(244, 143, 183);
+  --violet: rgb(103, 58, 255);
+
+}
+
+.magic-place {
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+
+}
+
+.magical-sparkie-icon>svg {
+  animation: rotate 2000ms linear infinite;
+}
+
+
+h1>.magic>.magical-sparkie-icon {
+  animation: scale 1200ms ease forwards;
+}
+
+.magical-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-size: xx-large;
 }
 
 .App {
@@ -25,6 +90,42 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.twitch-card::before {
+  background: linear-gradient(130deg,
+      transparent 0% 33%,
+      rgb(98, 0, 234) 66%,
+      rgb(236, 64, 122) 83.5%,
+      rgb(253, 216, 53) 100%);
+
+}
+
+.twitch-title,
+.twitch-subtitle {
+  font-family: 'Anek Latin', sans-serif !important;
+}
+
+.twitch-card:hover>.twitch-card-content>.twitch-subtitle>.twitch-word {
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+  transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90) !important;
+}
+
+
+
+.twitch-card-content {
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 8%,
+      transparent 8%);
+  background-position: 0% 0%;
+  background-size: 3.8vmin 3.8vmin;
+}
+
+.twitch-card-content:hover {
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 8%,
+      transparent 8%);
+  background-position: 0% 0%;
+  background-size: 3.8vmin 3.8vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {

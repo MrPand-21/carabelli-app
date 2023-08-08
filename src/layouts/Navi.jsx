@@ -57,6 +57,8 @@ const Navi = () => {
                             <CrMenuItem to="/style/hover" name="hover" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/searcher" name="searcher" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/gallery" name="gallery" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/magical-text" name="magical" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/twitch-hover" name="twitch" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                         </div>
                     </CrMenu>
                 </div>

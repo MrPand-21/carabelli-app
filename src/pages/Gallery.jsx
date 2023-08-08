@@ -19,11 +19,11 @@ const Gallery = () => {
             const mouseX = event.clientX - dimensions.left,
                 mouseY = event.clientY - dimensions.top
 
-            const rx = mouseX / screen.current.offsetWidth,
-                ry = mouseY / screen.current.offsetHeight
+            const rx = mouseX / (screen.current.offsetWidth),
+                ry = mouseY / (screen.current.offsetHeight)
 
-            const ax = gallery.current.offsetWidth * rx * -1,
-                ay = gallery.current.offsetHeight * ry * -1
+            const ax = gallery.current.offsetWidth * rx * -.83,
+                ay = gallery.current.offsetHeight * ry * -.83
 
             gallery.current.animate({
                 transform: `translate(${ax}px, ${ay}px)`
@@ -40,9 +40,6 @@ const Gallery = () => {
         if (gallery.current) {
             gallery.current.addEventListener("mousemove", handleOnMouseMove)
         }
-        return () => {
-            gallery.current.removeEventListener("mousemove", handleOnMouseMove)
-        };
     }, [])
     return (
         <div ref={ screen } className='screen overflow-hidden  relative m-0 h-[80vh] w-full bg-black rounded-2xl'>

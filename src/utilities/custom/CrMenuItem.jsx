@@ -17,8 +17,8 @@ const defaultProps = {
 const CrMenuItem = (props) => {
     const { clickFxn, to, name, basis } = props
 
-    return (<div className={ 'text-[3vw] group subpixel-antialiased capitalize text-center relative text-[#a5673f]/80 ' + basis }>
-        <Link to={ to } className=' top-1/3 left-[17%] font-sans hover:animate-pulse z-20 opacity-75 
+    return (<div className={ 'text-[3vw] cursor-pointer group subpixel-antialiased capitalize text-center relative text-[#a5673f]/80 ' + basis }>
+        <Link to={ to } className=' top-[27%] cursor-pointer left-[17%] font-sans hover:animate-pulse z-20 opacity-75 
         hover:underline absolute hover:decoration-wavy hover:decoration-[#a5673f]/90 group'
             onClick={ clickFxn }>
 
