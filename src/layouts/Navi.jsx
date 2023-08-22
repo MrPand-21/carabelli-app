@@ -52,13 +52,18 @@ const Navi = () => {
                 <div className={ "item group/style relative hover:border-x-2 hover:border-[#a5673f]/60 hover:shadow-2xl" + (activeItem == "style" ? " active" : "") } style={ { color: "#a5673f" } }>
                     Style
                     <CrMenu>
-                        <div className='flex flex-col basis-2/4'>
+                        <div className='flex flex-col basis-4/12'>
                             <CrMenuItem to="/style/wand" name="wand" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/hover" name="hover" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/searcher" name="searcher" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/gallery" name="gallery" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/magical-text" name="magical" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/twitch-hover" name="twitch" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                        </div>
+                        <div className='flex flex-col basis-1/3'>
+                            <CrMenuItem to="/style/staggered-grid" name="grid" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/website-menu" name="menu" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/trail" name="trail" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                         </div>
                     </CrMenu>
                 </div>

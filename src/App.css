@@ -101,6 +101,17 @@ h1>.magic>.magical-sparkie-icon {
 
 }
 
+.bg-pattern {
+  background-image: radial-gradient(rgba(2555, 255, 255, 0.1) 9%,
+      transparent 9%);
+  background-position: 0%;
+  background-size: 12vmin 12vmin;
+}
+
+.menu-item {
+  font-family: "Ibarra Real Nova", serif;
+}
+
 .twitch-title,
 .twitch-subtitle {
   font-family: 'Anek Latin', sans-serif !important;
