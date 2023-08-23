@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import CrLine from '../utilities/custom/style/CrLine';
 import CrText from '../utilities/custom/style/CrText';
 
 const propTypes = {};
 
 const defaultProps = {};
+
+// You can basically make a whole one vibing gradient effect on the fancy text 
+// by attaching a new gradient to each of the spans and attributing the gradient values to variables.
+// Thus, with a pure logic (related to time or the elements next & before it) we can update the variables
+// Unfortunately i won't do that, try it yourself :)
 
 function randomInt() {
     let min = Math.floor(Math.random() * (101) + -100)
@@ -31,9 +35,9 @@ function createSpan(content, word, index) {
 
 const Expulsive = () => {
 
-    let fancyClass = "fancy hover:!opacity-100 "
-        + "hover:cursor-pointer hover:bg-gradient-to-r hover:from-emerald-400 hover:via-cyan-400 hover:to-sky-400 hover:bg-clip-text hover:text-transparent"
-        + " from-25% via-60% to-100%"
+    let fancyClass = "fancy hover:!opacity-100 from-25% via-60% to-100% hover:cursor-pointer hover:bg-gradient-to-r"
+        + " hover:from-emerald-400 hover:via-cyan-400 hover:to-sky-400 hover:bg-clip-text hover:text-transparent"
+
     const text = useRef(null)
 
     useEffect(() => {
@@ -81,7 +85,6 @@ const Expulsive = () => {
                 <CrText>good</CrText>
                 <CrText>work</CrText>
                 <CrText>I</CrText>
-
             </CrLine>
             <CrLine>
                 <CrText onMouseEnter={ onMouseEnter } onMouseLeave={ onMouseLeave } className={ fancyClass }>suppose,</CrText>
@@ -93,6 +96,5 @@ const Expulsive = () => {
 
 Expulsive.propTypes = propTypes;
 Expulsive.defaultProps = defaultProps;
-// #endregion
 
 export default Expulsive;
