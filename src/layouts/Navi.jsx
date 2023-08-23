@@ -64,6 +64,7 @@ const Navi = () => {
                             <CrMenuItem to="/style/staggered-grid" name="grid" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/website-menu" name="menu" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                             <CrMenuItem to="/style/trail" name="trail" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
+                            <CrMenuItem to="/style/expulsive-text" name="expulsive" basis={ "basis-1/6" } clickFxn={ () => { handleActiveItem("style") } } />
                         </div>
                     </CrMenu>
                 </div>

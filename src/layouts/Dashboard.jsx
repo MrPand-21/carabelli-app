@@ -17,6 +17,7 @@ import TwitchHover from '../pages/TwitchHover';
 import StaggeredGrid from '../pages/StaggeredGrid';
 import WebMenu from '../pages/WebMenu';
 import Trail from '../pages/Trail';
+import Expulsive from '../pages/Expulsive';
 
 
 const propTypes = {};
@@ -48,7 +49,7 @@ const Dashboard = () => {
                         <Route path="/style/staggered-grid" Component={ StaggeredGrid } />
                         <Route path="/style/website-menu" Component={ WebMenu } />
                         <Route path="/style/trail" Component={ Trail } />
-
+                        <Route path="/style/expulsive-text" Component={ Expulsive } />
                     </Routes>
                 </div>
             </div>
